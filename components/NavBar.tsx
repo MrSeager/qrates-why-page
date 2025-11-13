@@ -11,12 +11,11 @@ export default function NavBar() {
 
     return (
         <nav className="fixed top-0 bg-gradient-to-b from-white to-transparent w-full text-black z-50">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-0">
                 <div className="flex justify-between items-center h-16">
                     <div className="flex items-center space-x-2">
                         <TbBrandNextjs size={40} />
                     </div>
-
                     <div className="uppercase font-semibold hidden md:flex space-x-6">
                         <Link href="/" className="hover:text-shadow-md hover:scale-105 duration-500">Discover</Link>
                         <Link href="/" className="hover:text-shadow-md hover:scale-105 duration-500">Search</Link>
@@ -25,8 +24,8 @@ export default function NavBar() {
                     </div>
 
                     <div className="hidden md:flex space-x-4">
-                        <button type="button" className="uppercase font-semibold bg-transparent px-3 py-1 hover:text-shadow-md hover:scale-105 duration-500">Log In</button>
-                        <button type="button" className="uppercase font-semibold bg-black text-white px-10 py-3 rounded-full hover:scale-105 duration-500">Make a record</button>
+                        <button type="button" className="cursor-pointer uppercase font-semibold bg-transparent px-3 py-1 hover:text-shadow-md hover:scale-105 duration-500">Log In</button>
+                        <button type="button" className="cursor-pointer uppercase font-semibold bg-black text-white px-10 py-3 rounded-full hover:scale-105 duration-500">Make a record</button>
                     </div>
 
                     <div className="md:hidden">
