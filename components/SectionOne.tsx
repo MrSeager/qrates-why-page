@@ -5,7 +5,7 @@ import Link from "next/link"
 export default function SectionOne() {
     return(
         <div className="grid grid-cols-1 gap-2 lg:grid-cols-2">
-          <div className="flex flex-col items-start justify-center gap-3">
+          <div className="px-5 flex flex-col items-start justify-center gap-3">
             <Link
               href='/'
               className="border-3 px-3 py-1 uppercase font-semibold

@@ -11,7 +11,7 @@ export default function NavBar() {
 
     return (
         <nav className="fixed top-0 bg-gradient-to-b from-white to-transparent w-full text-black z-50">
-            <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-0">
+            <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-5">
                 <div className="flex justify-between items-center h-16">
                     <div className="flex items-center space-x-2">
                         <TbBrandNextjs size={40} />
