@@ -11,7 +11,7 @@ interface SectionTwoItemProps {
 export default function SectionTwoItem({ classProp, text1, text2, text3, img }: SectionTwoItemProps) {
     return (
         <div className={`${classProp} py-[100px] flex flex-col items-center justify-between gap-5 col-span-2 md:col-span-1`}>
-            <span className="inline-flex items-center bg-white px-3 py-2 font-semibold text-black border-2 uppercase">
+            <span className="animate-bounce inline-flex items-center bg-white px-3 py-2 font-semibold text-black border-2 uppercase">
                 {text1}
             </span>
             <h2 className="text-center text-[50px] font-semibold">{text2}</h2>
