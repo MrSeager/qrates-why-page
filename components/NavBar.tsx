@@ -10,7 +10,7 @@ export default function NavBar() {
     const [isOpen, setIsOpen] = useState<boolean>(false)
 
     return (
-        <nav className="fixed top-0 bg-gradient-to-b from-white to-transparent w-full text-black z-50">
+        <nav className="fixed top-0 bg-white/75 w-full text-black z-50">
             <div className="max-w-[100rem] mx-auto px-4 sm:px-6 lg:px-4">
                 <div className="flex justify-between items-center h-16">
                     <div className="flex items-center space-x-2">
@@ -36,8 +36,11 @@ export default function NavBar() {
                 </div>
             </div>
 
-            {isOpen && (
-                <div className="uppercase font-semibold md:hidden px-4 pb-4 flex flex-col items-center gap-2">
+                <div 
+                    className={`transition-all duration-300 ease-in-out ${
+                                isOpen ? "max-h-100 opacity-100" : "max-h-0 opacity-0"} 
+                                uppercase font-semibold md:hidden px-4 pb-4 flex flex-col items-center gap-2`}
+                >
                     <Link href="/" className="block focus:text-shadow-md focus:scale-105 transition-transform duration-500">Discover</Link>
                     <Link href="/" className="block focus:text-shadow-md focus:scale-105 transition-transform duration-500">Search</Link>
                     <Link href="/" className="block focus:text-shadow-md focus:scale-105 transition-transform duration-500">Why</Link>
@@ -45,7 +48,6 @@ export default function NavBar() {
                     <button type='button' className="uppercase font-semibold bg-transparent focus:text-shadow-md focus:scale-105 transition-transform duration-500">Login</button>
                     <button type='button' className="uppercase font-semibold bg-black text-white px-10 py-3 rounded-full focus:scale-105 transition-transform duration-500">Make a record</button>
                 </div>
-            )}
         </nav>
     )
 }

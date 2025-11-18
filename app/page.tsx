@@ -3,6 +3,7 @@ import Image from "next/image";
 import SectionOne from "@/components/SectionOne";
 import SectionTwo from "@/components/SectionTwo";
 import SectionThree from "@/components/SectionThree";
+import SectionFour from "@/components/SectionFour";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
         <SectionOne />
         <SectionTwo />
         <SectionThree />
+        <SectionFour />
       </main>
     </div>
   );
