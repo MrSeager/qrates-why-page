@@ -29,3 +29,19 @@ body {
 .text-outline {
   -webkit-text-stroke: 2px black;
 }
+
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+.marquee-wrapper {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-content {
+  animation: marquee 15s linear infinite;
+}
+
+
