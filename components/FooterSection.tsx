@@ -2,11 +2,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import FooterSectionItem from "./FooterSectionItem";
+//Icons
+import { TbBrandNextjs } from "react-icons/tb";
+import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 
 export default function FooterSection() {
     return(
         <footer className="p-5 bg-black text-white">
-            <nav className="grid grid-cols-4 gap-3">
+            <nav className="grid grid-cols-2 md:grid-cols-4 gap-5">
                 <FooterSectionItem 
                     title="For artists"
                     links={[
@@ -45,8 +48,50 @@ export default function FooterSection() {
                         { href: "/", label: "Shipping" },
                     ]}
                 />
-                <ul className="col-span-2">5</ul>
-                <ul className="col-span-2">6</ul>
+                <div className="mt-[50px] col-span-2 md:col-span-4 lg:col-span-2 flex gap-3 justify-start items-center">
+                    <TbBrandNextjs size={150} />
+                    <h5 className="uppercase font-bold text-[30px] md:text-[40px] text-base/10">
+                        Qrates<br />
+                        <span className="text-black text-outline-white">music in<br />
+                        your hands</span>
+                    </h5>
+                </div>
+                <div className="mt-[50px] col-span-2 md:col-span-4 lg:col-span-2 flex flex-col items-center md:items-end justify-end gap-5">
+                    <div className="flex gap-3">
+                        <button type="button" className="text-[40px] hover:text-[#FFF804] duration-500"><FaFacebook /><span className="hidden">Facebook</span></button>
+                        <button type="button" className="text-[40px] hover:text-[#FFF804] duration-500"><FaInstagram /><span className="hidden">Instagram</span></button>
+                        <button type="button" className="text-[40px] hover:text-[#FFF804] duration-500"><FaTwitter /><span className="hidden">Twitter</span></button>
+                    </div>
+                    <ul className="flex gap-5 text-[12px]">
+                        <li>
+                            <Link 
+                                href="/"
+                                className="duration-500 font-semibold hover:text-[#FFF804]"
+                            >
+                                Terms of Service
+                            </Link>
+                        </li>
+                        <li>
+                            <Link 
+                                href="/"
+                                className="duration-500 font-semibold hover:text-[#FFF804]"
+                            >
+                                Privacy Policy
+                            </Link>
+                        </li>
+                        <li>
+                            <Link 
+                                href="/"
+                                className="duration-500 font-semibold hover:text-[#FFF804]"
+                            >
+                                Legal Terms
+                            </Link>
+                        </li>
+                        <li>
+                            <h6 className="font-semibold">TDMS Inc.</h6>
+                        </li>
+                    </ul>
+                </div>
             </nav>
         </footer>
     );

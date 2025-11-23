@@ -11,7 +11,7 @@ interface FooterSectionItemProps {
 
 export default function FooterSectionItem({ title, links }: FooterSectionItemProps) {
   return (
-    <ul className="px-5 flex flex-col gap-2">
+    <ul className="px-5 flex flex-col gap-2 col-span-2 lg:col-span-1 items-center md:items-start">
       <li>
         <h6 className="text-[20px] font-semibold uppercase mb-3">{title}</h6>
       </li>
